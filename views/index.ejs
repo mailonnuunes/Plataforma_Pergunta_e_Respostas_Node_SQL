@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<body>
+    <%- include('partials/navbar') %>
+
+        <div class="container mt-5">
+            <h1>Perguntas <a href="/perguntar" class="btn btn-success ml-5">Perguntar</a></h1>
+            <% perguntas.forEach(pergunta =>{%>
+                
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h3><%= pergunta.titulo %></h3>
+                </div>
+                <div class="card-footer">
+                   <a href="/pergunta/<%=pergunta.id%>"><button class="btn btn-success"> Responder</button></a>
+                </div>
+            </div>
+            <%}) %>
+        </div>
+
+
+</body>
+<%- include('partials/footer') %>
